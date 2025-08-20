@@ -1,21 +1,11 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
+    id("dev.slne.surf.surfapi.gradle.velocity") version "1.21.7+"
 }
 
 group = "dev.slne.surf"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+velocityPluginFile {
+    main = "dev.slne.surf.motdchanger.MotdChanger"
+    authors = listOf("twisti")
 }
