@@ -15,7 +15,8 @@ data class MotdConfig(
     data class MotdServerConfig(
         val maxPlayerCount: Int? = null,
         val playerCount: Set<String> = mutableSetOf(),
-        val motd: Component = Component.empty()
+        val motd: Component = Component.empty(),
+        val favicon: String? = null
     )
 
     fun getServerConfig(address: String) = servers[address]
